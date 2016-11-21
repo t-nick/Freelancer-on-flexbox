@@ -26,13 +26,25 @@ nav{
 	margin: 0 auto;
 }
 .www{
-	display: -webkit-flex;
+	 	display: -webkit-flex;
     display: flex;
-	
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    /*justify-content:center;
+    align-items: stretch; 
+    align-content: stretch;*/
    }
+   
 
    .logo{
+   	flex: 1 1 150px;
    	margin-right: auto;
+   }
+   .mobmenu{
+   	flex: 1 1 150px;
+   	display: none;
+   	text-align: right;
+   	margin: 20px;
    }
    .linemenu{
    	display: -webkit-flex;
@@ -64,7 +76,7 @@ nav{
 		font-family: "Montserrat";
 		font-weight: bold;
 		font-size: 48px;
-		color: #314a5b;
+		color: #2a3842;
 		text-transform: uppercase;
 	}
 	.title p{
