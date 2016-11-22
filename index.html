@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="vievport" content="width=device-width, initial-scale=1, maxim-scale=1"/>
 	<title>freelancer</title>
+	<link rel="shortcut icon" href="favicon.ico"> 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300" rel="stylesheet"> 
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,21 +21,19 @@
 		<div class="www">
 					<div class="logo"><a href="index.html" >
 							<img src="img/logo.png" class="logofix" alt="logo"></a></div>
-						<!-- 11 -->
-						<div class="mobmenu">
-						<div class="dropdown">
-			<button onclick="myFunction()" class="dropbtn"><i class="fa fa-bars"></i></button>
-			  <div id="myDropdown" class="dropdown-content">
-			    <a href="#about">About</a>
-			    <a href="#work">Work</a>
-			    <a href="#portfolio">Portfolio</a>
-			    <a href="#team">Team</a>
-			    <a href="#"><i class="fa fa-twitter"></i></a>
-			    <a href="#"><i class="fa fa-facebook"></i></a>
-			  </div>
-			</div>
-				</div>
-<!-- 11 -->
+						
+				<div class="mobmenu">
+					<a class="burger-nav"><i class="fa fa-bars"></i></a> 
+			   		<ul>
+			                <li><a href="#about">About</a></li>
+							<li><a href="#work">Work</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#team">Team</a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					</ul>
+			 	</div>
+
 			
 				<div class="linemenu" >
 						<ul class="menu">
@@ -48,17 +47,14 @@
 						
 					</div>
 				</div>
-			
 		</nav>
-		
 			<div class="title">
 					intelligence<br/>
 					is  nothing without <br/>ambition<span>.</span>
 					<p>We’re small but impressive creative agency.</p>
 					<button><a href="#">read more</a></button>
 				</div>
-			
-			
+				
 </header>
 <section id="work" class="work">
 
@@ -105,7 +101,6 @@
 	        <a class="toggler more" href="#">more<i class="fa fa-arrow-right"></i></a>
 		</div>
   	</div>
-  
 </section>
 
 <section  class="team">
@@ -154,98 +149,10 @@
 			<div class="copy">© Freelancer - Designed by Wojtek Kwiatkowski</div>
 			</div>
 </footer>
-<script type="text/javascript">
-var base = {
-	    findClass: function(str, node) {
-	         if(document.getElementsByClassName) return (node || document).getElementsByClassName(str);
-	         else {
-	              var node = node || document, list = node.getElementsByTagName('*'), length = list.length, Class = str.split(/\s+/), classes = Class.length, array = [], i, j, key;
-	              for(i = 0; i < length; i++) {
-	                    key = true;
-	                    for(j = 0; j < classes; j++) if(list[i].className.search('\\b' + Class[j] + '\\b') == -1) key = false;
-	                    if(key) array.push(list[i]);
-	              }
-	              return array;
-	         }
-	    },
-	    // Добавление обработчиков событий
-	    bind: function(node, type, listener) {
-	        if(node.addEventListener) node.addEventListener(type, listener, false);
-	        //@cc_on node.attachEvent('on' + type, function() { listener.call(node); });
-	    },
-	    // Реализация DOMContentLoaded
-	    init: [],
-	    ready: function() {
-	        if(!arguments.callee.done) {
-	            arguments.callee.done = true;
-	            if(this.timer) clearInterval(this.timer);
-	            var i, length = this.init.length;
-	            for(i = 0; i < length; i++) this.init[i]();
-	            this.init = [];
-	        }
-	    },
-	    check: function() {
-	        var _this = this, listener = function() {
-	            _this.ready();
-	        };
-	        if(document.addEventListener) document.addEventListener('DOMContentLoaded', listener, false);
-	        if(/KHTML|WebKit/i.test(navigator.userAgent)) this.timer = setInterval(function() {
-	            if(/loaded|complete/.test(document.readyState)) base.ready();
-	        }, 10);
-	        /*@cc_on document.write(unescape('%3CSCRIPT onreadystatechange="if(this.readyState==\'complete\') base.ready()" defer=defer src=\/\/:%3E%3C/SCRIPT%3E')); @*/
-	        this.bind(window, 'load', listener);
-	    }
-	};
-	 	// Функции для работы с панельками
-	var toggler = {
-    process: function() {
-	        var i, list = base.findClass('toggler'), length = list.length;
-	        for(i = 0; i < length; i++) base.bind(list[i], 'click', this.toggle);
-	        list = base.findClass('content');
-	        length = list.length;
-	        for(i = 0; i < length; i++) list[i].style.display = 'none';
-	    },
-	    toggle: function() {
-	        var content = base.findClass('content', this.parentNode)[0], e = arguments[0] || window.event;
-	        if(content.style.display == 'block') {
-	            content.style.display = 'none';
-	            this.innerHTML = 'more <i class="fa fa-arrow-right"></i>';
-	        }
-	        else {
-	            content.style.display = 'block';
-	            this.innerHTML = 'less <i class="fa fa-arrow-left"></i>';
-	        }
-	        e.preventDefault ? e.preventDefault() : e.returnValue = false;
-	    }
-	};
-	 	// Ищем блоки с классом «toggle» по событию DOMContentLoaded
-	base.init.push(function() {
-	    toggler.process();
-	});
 
-	 	// Запускаем проверку готовности DOM
-	base.check();
-</script>
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="js/more.js"></script>
+
 </body>
 </html>

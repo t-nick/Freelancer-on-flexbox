@@ -10,7 +10,9 @@ body{
 
 }
 
-
+.fa-fonticons{
+	color: #fa5c65;
+}
 
 /*HEADER*/
 header{
@@ -19,6 +21,7 @@ header{
 	max-width: 1370px;
 	height: 1058px;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 nav{
@@ -68,6 +71,9 @@ nav{
 		color: #fa5c65;
 	}
 	
+
+
+
 
 	.title{
 		max-width: 940px;

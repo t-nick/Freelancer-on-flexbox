@@ -7,32 +7,19 @@ header{
 	height: 758px;
 	margin: 0 auto;
 }
-	.title{
-		margin-top: 200px;
-		margin-left: 20px;
-	}
+.title{
+	margin-top: 200px;
+	margin-left: 20px;
+}
 .work{
 	margin: 40px 25px;
 }
-
-/*.colum{
-	max-width: 250px;
-	margin-right: 10px;
-}
-*/
 .portfolio{
 	margin-left: 20px;
 }
 .team{
 	margin:50px 20px;
 }
-/*.person{
-	margin-right: 5px;
-	max-width: 260px;
-}*/
-/*.foto{
-	margin-right: 10px;
-}*/
 .foot{
 	margin: 10px 20px;
 }
@@ -49,7 +36,11 @@ header{
 	height: 594px;
 	margin: 0 auto;
 }
-
+.logo{
+	position: absolute;
+	top: -15px;
+	left: 0;
+}
 .linemenu{
 	display: none;
 }
@@ -57,74 +48,67 @@ header{
 	display: initial;
 }
 
-.dropbtn {
-        background-color: transparent;
-    color: #fa5c65;
-    padding: 5px 15px 5px 5px;
-    font-size: 30px;
-    border: none;
-    cursor: pointer;
+.burger-nav{
+	display: block;
+	height: 45px;
+	background-color: transparent;
 }
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: tra;
+.burger-nav i{
+	text-align: right;
+	color: #fa5c65;
+	cursor: pointer;
+	font-size: 28px;
 }
-
-.dropdown {
-    position: relative;
-    display: inline-block;
+.mobmenu ul{
+	overflow: hidden;
+	background-color: rgba(255,255,255,0.5);
+	height: 0;
+	border-radius: 5px;
 }
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgba(255,255,255,0.5);
-    min-width: 260px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        text-align: center;
-        top:60px;
-    right: 53px;
-    border-radius: 4px;
+.mobmenu ul.open{
+	height: auto;
 }
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 80px;
-    text-decoration: none;
-    
-    
+.mobmenu ul li{
+	float: none;
+	text-align: right;
+	width: 100%;
+	margin: 0;
+	list-style: none;
+	height: 35px;
+	line-height: 35px;
 }
-
-.dropdown a:hover {background-color: #f1f1f1}
-
-.show {display:block;}
-
-
+.mobmenu ul li a{
+	color: #263742;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: block;
+	border-bottom: 1px solid #62849f;
+	padding-right: 10px;
+	font-family: "Montserrat";
+}
+.mobmenu ul li a i{
+	color: #fa5c65;
+}
 .title{
 	margin-top: 170px;
-		font-size: 34px;
-		
-	}
-	.title p{
-	
-	font-size: 16px;
-	
-	margin-top: 20px;
-	
-	}
-	.title button{
-		margin-top: 30px;
-		height: 55px;
-		width: 150px;
+	font-size: 34px;	
 }
-
+.title p{
+	font-size: 16px;
+	margin-top: 20px;
+}
+.title button{
+	margin-top: 30px;
+	height: 55px;
+	width: 150px;
+}
 .pimg{
 	display: none;
 }
-	.point{
-		display: initial;
-	}
+.point{
+	display: initial;
+}
 .portfolio{
 	margin-top: 10px;
 }
@@ -135,7 +119,6 @@ header{
 }
 
 @media only screen and (max-width : 480px) {
-
 header{
 	background: url("../img/baner500x593.jpg")no-repeat;
 	background-position: top right;
