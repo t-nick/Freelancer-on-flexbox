@@ -1,4 +1,4 @@
-
+/*PC*/
 @media only screen and (max-width : 979px) {
 header{
 	background: url("../img/baner980x758.jpg")no-repeat;
@@ -23,12 +23,9 @@ header{
 .foot{
 	margin: 10px 20px;
 }
-
 }
-
-
+/*TAB*/
 @media only screen and (max-width : 769px) {
-
 header{
 	background: url("../img/baner769x594.jpg")no-repeat;
 	background-position: top right;
@@ -47,7 +44,6 @@ header{
 .mobmenu{
 	display: initial;
 }
-
 .burger-nav{
 	display: block;
 	height: 45px;
@@ -117,7 +113,7 @@ header{
 	text-align: center;
 }
 }
-
+/*mobile phone*/
 @media only screen and (max-width : 480px) {
 header{
 	background: url("../img/baner500x593.jpg")no-repeat;
